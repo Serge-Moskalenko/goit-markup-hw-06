@@ -54,29 +54,41 @@
                         </svg>
                     </button>
                     <form>
-                        <b>Оставьте свои данные, мы перезвоним</b>
+                        <b class="text-model-title">Оставьте свои данные, мы вам перезвоним</b>
                         <ul class="model-window">
                             <li class="form-type">
-                                <label for="name">Имя</label>
-                                <input type="text">
+                                <label for="name"><span class="text-model">Имя</span></label>
+                                <input type="text" name="name" id="name" class="form-input">
+                                <svg class="icon-model" width=18px height="18px">
+                                    <use href="./images/icons.svg#icon-person"></use>
+                                </svg>
                             </li>
                             <li class="form-type">
-                                <label for="tel">Телефон</label>
-                                <input type="tel">
+                                <label for="tel"><span class="text-model">Телефон</span></label>
+                                <input type="tel" class="form-input" name="telephon" id="tel">
+                                <svg class="icon-model" width=18px height="18px">
+                                    <use href="./images/icons.svg#icon-phone"></use>
+                                </svg>
                             </li>
                             <li class="form-type">
-                                <label for="mail">Почта</label>
-                                <input type="email">
+                                <label for="mail"><span class="text-model">Почта</span></label>
+                                <input type="email" class="form-input" name="mail" id="mail">
+                                <svg class="icon-model" width=18px height="18px">
+                                    <use href="./images/icons.svg#icon-email"></use>
+                                </svg>
                             </li>
                             <li class="form-type">
-                                <label for="comment">Коментарии</label>
-                                <textarea name="comment" cols="30" rows="10"></textarea>
+                                <label for="comment"><span class="text-model">Комментарий</span></label>
+                                <textarea name="comment" class="texterea" placeholder="Введите текс" name="comment" id="comment"></textarea>
                             </li>
-                            <div>
-                                <input type="checkbox">
-                                <label for="">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                            <div class="checkbox">
+                                <input type="checkbox" class="checkbox-icon">
+                                <svg class="check" width="16" height="15">
+                                    <use href="./images/icons.svg#icon-icon-check"></use>
+                                </svg>
+                                <label for=""><span class="text-model-checkbox">Соглашаюсь с рассылкой и принимаю</span> <a><span class="document">Условия договора</span></a></label>
                             </div>
-                            <button type="submit">Отправить</button>
+                            <button class="submit" type="submit">Отправить</button>
                         </ul>
                     </form>
                 </div>
