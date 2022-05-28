@@ -91,6 +91,8 @@ nav {
     display: block;
     margin-right: 50px;
     color: var(--praimeri-text-color);
+
+    transition: color var(--animation);
 }
 
 .site-nav .link-nav:last-child {
@@ -120,6 +122,9 @@ nav {
 .auto-naw.list .link-nav {
     color: var(--title-text-color);
     display: inline-flex;
+    fill: var(--title-text-color);
+
+    transition: color var(--animation);
 }
 
 .auto-naw .link-nav:hover,
@@ -225,8 +230,16 @@ nav {
     margin: 8px;
 }
 
-.close-button .close{
+.close{
+    fill: var(--title-text-color);
+
+    transition: fill var(--animation);
+}
+
+.close-button .close:hover,
+.close-button .close:focus{
     cursor: pointer;
+    fill: var(--accent-color);
 }
 
 .form-type{
@@ -319,6 +332,8 @@ nav {
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: border var(--animation) ;
 }
 
 .texterea{
@@ -337,6 +352,7 @@ nav {
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .submit{
@@ -351,6 +367,7 @@ nav {
     background-color: var(--accent-color);
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
 
 b{
@@ -365,8 +382,24 @@ b{
 }
 
 .checkbox-icon{
-    appearance: none;
+    left: 3px;
+    top: 6px;
+    opacity: 0;
     position: absolute;
+    cursor: pointer;
+}
+
+.empty-box {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    width: 16px;
+    height: 15px;
+    border: 2.3px solid var(--praimeri-text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    pointer-events: none;
 }
 
 .check {
@@ -376,6 +409,18 @@ b{
     border-radius: 4px;
     left: 0px;
     top: 4px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-icon:checked + .check{
+    opacity: 1;
+
+}
+
+.checkbox-icon:checked ~.empty-box{
+    opacity: 0;
+
 }
 
 /* section */
@@ -588,13 +633,15 @@ img {
 }
 
 .button-portfolio {
-    background: var(--backgraund-section-color);
+    background-color: var(--backgraund-section-color);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.63;
     border-radius: 4px;
     padding: 6px 22px;
     border: 0;
+
+    transition: color var(--animation), background-color var(--animation);
 }
 
 .button-portfolio:hover,
@@ -647,10 +694,71 @@ footer {
     line-height: 1.71;
     text-align: left;
     text-decoration: none;
+
+    transition: color var(--animation);
+}
+
+.footer-send{
+    margin-top: 12px;
+    margin-left: 93px;
+}
+
+.label-footer{
+    position: relative;
+    display:flex;
+    margin-top: 20px;
+}
+
+.input-footer{
+    width: 358px;
+    height: 50px;
+    background-color: var(--hero-footer-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    /* padding: 10px 20px; */
+}
+
+.input-footer:focus{
+    color: #2196F3;
+    padding: 10px 20px;
+}
+
+
+.footer-send input::placeholder{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    text-align: left;
+    padding: 15px 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.button-send{
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: 10px 29px;
+    cursor: pointer;
+}
+
+.icon-send{
+    position: absolute;
+    right: 28px;
+    top: 13px;
 }
 
 .address .mail:hover,
-:focus {
+.address .mail:focus {
     color: var(--accent-color);
 }
 
@@ -669,7 +777,7 @@ footer {
     /* outline: 2px solid #000; */
 }
 
-.container.footer {
+.container.in-footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -691,7 +799,8 @@ footer {
     margin-right: 10px;
     padding: 0;
     margin-top: 2px;
-    /* fill:#757575; */
+
+    transition: fill var(--animation);
 }
 
 .envelope:hover,
@@ -703,7 +812,8 @@ footer {
 .smartphone {
     margin-right: 10px;
     padding: 0;
-    /* fill: var(--title-text-color); */
+
+    transition: fill var(--animation);
 }
 
 .smartphone:hover,
@@ -729,6 +839,10 @@ footer {
     width: 44px;
     height: 44px;
     margin: 16px 4px 30px 4px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    transition: background-color var(--animation);
 }
 
 .team.list .first-child {
@@ -738,6 +852,8 @@ footer {
 .instagram {
     fill: var(--icon-color);
     padding: 12px;
+
+    transition: fill var(--animation);
 }
 
 .instagram:hover,
@@ -749,13 +865,14 @@ footer {
 .icon-team:focus {
     background-color: var(--accent-color);
     cursor: pointer;
-    border-radius: 50%;
 }
 
 .fon-clients {
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8
+    border: 1px solid #AFB1B8;
+
+    transition: border var(--animation);
 }
 
 .fon-clients:hover,
@@ -771,6 +888,8 @@ footer {
 .utility {
     fill: var(--icon-color);
     padding: 16px 32px;
+
+    transition: fill var(--animation);
 }
 
 .utility:hover,
@@ -806,7 +925,7 @@ li {
     margin-right: 0;
 }
 
-.footer.title {
+.in-footer.title {
     font-family: Roboto;
     font-size: 14px;
     font-weight: 700;
@@ -838,22 +957,24 @@ li {
     margin-top: 12px;
 }
 
-.instagram.footer {
+.instagram.in-footer {
     fill: var(--white-color);
 }
 
-.flex-icon .fodt {
+.flex-icon .foter {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    transition: background-color var(--animation);
 }
 
-.icon-team.first-child.fodt {
+.icon-team.first-child.foter {
     margin-left: 0;
 }
 
-.flex-icon .fodt:hover,
-.flex-icon .fodt:hover {
+.flex-icon .foter:hover,
+.flex-icon .foter:hover {
     background-color: var(--accent-color);
-    border-radius: 50%;
     cursor: pointer;
 }
