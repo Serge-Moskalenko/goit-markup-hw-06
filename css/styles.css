@@ -130,6 +130,7 @@ nav {
 .auto-naw .link-nav:hover,
 .auto-naw .link-nav:focus {
     color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .site-nav .link-nav:hover,
@@ -311,10 +312,10 @@ nav {
     fill: var(--accent-color);
 }
 
-.form-type .form-input:hover,
-.form-type .form-input:focus{
+.form-input:hover,
+.model-window .form-type .form-input:focus{
     color: #000;
-    border: 1px solid #2196F3;
+    border: 6px solid #2196F3;
     cursor: pointer;
 }
 
@@ -979,6 +980,6 @@ li {
     cursor: pointer;
 }
 
-header{
+.header{
     border: 1px solid rgba(236, 236, 236, 1)
 }
