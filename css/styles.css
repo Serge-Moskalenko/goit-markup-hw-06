@@ -251,7 +251,7 @@ nav {
     text-align: left;
 }
 
-.model-window{
+form{
     margin-left: 44px;
     margin-right: 36px;
     padding: 0;
@@ -261,6 +261,7 @@ nav {
     display: block;
     margin-top: 36px;
     margin-bottom: 12px;
+    margin-left: 0;
     padding: 0;
 }
 
@@ -313,10 +314,11 @@ nav {
 }
 
 .form-input:hover,
-.model-window .form-type .form-input:focus{
+.form-input:focus{
     color: #000;
-    border: 6px solid #2196F3;
+    border: 1px solid #2196F3;
     cursor: pointer;
+    outline: none;
 }
 
 .texterea:hover,
