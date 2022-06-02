@@ -326,6 +326,7 @@ form{
     color: #000;
     border: 1px solid var(--accent-color);
     cursor: pointer;
+    outline: none;
 }
 
 .form-input{
